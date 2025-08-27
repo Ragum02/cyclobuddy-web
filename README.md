@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cyclobuddy Web
 
-## Getting Started
+Cyclobuddy Web is a web app I’m building to help cyclists find and join group rides nearby. Users can create rides, see rides around them, join rides, and connect with other cyclists. The goal is to make cycling more social, fun, and easy to organize.
+This project is also my first experiment with Test-Driven Development (TDD) and Clean Architecture, so I’m structuring the code and writing tests from the start to enforce good practices and maintainability.
 
-First, run the development server:
+## Why a Separate Web Version
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I decided to create a web version separate from the mobile app for a few reasons:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Easier MVP** – Focusing on the web first makes it easier to build and test the core features without worrying about mobile-specific challenges.  
+2. **Accessibility** – Anyone can use it from a browser, no matter what device or OS they have.  
+3. **Simple development** – With Next.js and Firebase, I can handle routing, real-time data, and server-side rendering without extra complexity.  
+4. **Independent updates** – The web and mobile apps can evolve separately, so I can add web-specific features without being limited by the mobile version.  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## MVP Features
 
-## Learn More
+- Sign up / log in / log out (email/password, optional Google and Strava login)  
+- Create, view, join, and delete rides  
+- Filter rides by type and distance  
+- See who’s participating in a ride  
+- Import GPX tracks and view them on a map  
+- Basic group chat for each ride  
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Frontend:** Next.js, React, Tailwind CSS  
+- **Backend / Database:** Firebase (Firestore & Auth)  
+- **Testing:** Jest (unit tests for domain and use-cases) 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/` – Next.js router, pages, layouts, API routes  
+- `src/` – Core code: domain entities, use-cases, repositories, UI components  
+- `public/` – Static assets  
+- `_docs/` – Documentation
