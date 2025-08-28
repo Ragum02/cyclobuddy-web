@@ -45,11 +45,11 @@ export default function NavLinks({ closeMenu }: NavLinksProps) {
         aria-label="account actions"
         className={clsx(
           'flex items-center',
-          isMobile ? 'flex-col gap-10 items-center' : 'flex-row gap-20',
+          isMobile ? 'flex-col gap-10 items-center mt-10' : 'flex-row gap-20',
         )}
       >
         <Link href="/login" onClick={handleClick} className={linkHover}>
-          Login
+          Se connecter
         </Link>
 
         <Button
