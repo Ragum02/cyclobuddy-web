@@ -1,0 +1,20 @@
+services:
+
+  cyclobuddy-web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: cyclobuddy-web-dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    develop:
+       watch:
+        - action: sync
+          path: .
+          target: /app
+          ignore:
+            - node_modules
+        - action: rebuild
+          path: package.json
