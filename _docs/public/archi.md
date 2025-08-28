@@ -57,6 +57,6 @@ Note: This architecture represents the current state of the CycloBuddy web MVP a
 ## 6. Future Considerations
 
 - Real-time chat using Firestore listeners.  
-- Push notifications for ride updates.  
+- Push notifications for ride updates or new message in a group chat.  
 - Advanced filtering and matching of rides.  
 - Multi-language support for international users.
