@@ -1,6 +1,6 @@
 import { render, screen, within } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Navbar from '@/app/components/Navbar';
+import Navbar from '@/app/components/Navbar/Navbar';
 
 describe('Navbar structure', () => {
   beforeEach(() => {
@@ -37,7 +37,7 @@ describe('Navbar structure', () => {
       within(actions).getByRole('link', { name: 'Login' }),
     ).toHaveAttribute('href', '/login');
     expect(
-      within(actions).getByRole('link', { name: 'S’inscrire' }),
+      within(actions).getByRole('link', { name: "S'inscrire" }),
     ).toHaveAttribute('href', '/register');
   });
 });
