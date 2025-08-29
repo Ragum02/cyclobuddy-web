@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="text-center text-white absolute bottom-0 z-20 w-screen flex flex-col md:flex-row justify-between items-center bg-[rgba(12,30,62,0.95)] md:h-40 backdrop-blur-md gap-2">
+    <footer className="text-center text-white z-20 w-screen flex flex-col md:flex-row justify-between items-center bg-[rgba(12,30,62,0.95)] md:h-40 backdrop-blur-md gap-2">
       <nav
         aria-label="footer main title and mobile application link"
         className="md:ml-10 flex flex-col items-center justify-evenly h-full"
