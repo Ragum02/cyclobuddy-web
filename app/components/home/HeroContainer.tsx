@@ -37,7 +37,7 @@ export default function HeroContainer() {
       ref={heroRef}
       className="flex flex-col items-center justify-evenly p-2 md:h-80 h-60
                  bg-gradient-to-br from-[#0c1e3e] via-[#1e3a8a] to-[#172554]
-                 text-white px-6 text-center overflow-hidden border-t
+                 text-white px-6 text-center overflow-hidden border-t border-gray-500
                  "
       style={{
         backgroundImage: `radial-gradient(circle at ${haloPos.x}px ${haloPos.y}px, rgba(255,255,255,0.15) 0px, transparent 100px),

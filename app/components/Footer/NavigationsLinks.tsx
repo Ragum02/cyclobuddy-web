@@ -4,7 +4,7 @@ import type { LinkItem } from '@/app/@types/linkItem';
 export default function NavigationsLinks() {
   const mainLinks: LinkItem[] = [
     { name: 'Sorties', href: '/rides' },
-    { name: 'Groupes', href: '/groups' },
+    { name: 'Mes sorties', href: '/my-rides' },
     { name: 'Nouvelle sortie', href: '/create-ride' },
   ];
 
