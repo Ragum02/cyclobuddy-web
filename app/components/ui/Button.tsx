@@ -24,7 +24,7 @@ export default function CTAButton<T extends React.ElementType = 'button'>({
     destructive:
       'bg-gradient-to-br from-red-600 to-red-500 border-red-400 text-white hover:from-red-500 hover:to-red-600 hover:translate-y-[-3px] hover:shadow-[0_2px_40px_rgba(220,38,38,0.6)]',
     accent:
-      'bg-gradient-to-br from-blue-600 to-blue-500 border-blue-400 text-white hover:from-blue-500 hover:to-blue-600 hover:translate-y-[-3px] hover:shadow-[0_2px_40px_rgba(5,150,105,0.6)]',
+      'bg-gradient-to-br from-blue-600 to-blue-500 border-blue-400 text-white hover:from-blue-500 hover:to-blue-600 hover:translate-y-[-3px] hover:shadow-[0_2px_20px_rgba(0,50,150,0.6)]',
   };
 
   const Component = as || 'button';

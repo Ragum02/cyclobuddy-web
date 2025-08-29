@@ -20,7 +20,7 @@ export default function NavigationsLinks({ closeMenu }: NavLinksProps) {
 
   const mainLinks: LinkItem[] = [
     { name: 'Sorties', href: '/rides', onClick: handleClick },
-    { name: 'Groupes', href: '/groups', onClick: handleClick },
+    { name: 'Mes sorties', href: '/my-rides', onClick: handleClick },
     { name: 'Nouvelle sortie', href: '/create-ride', onClick: handleClick },
   ];
 
