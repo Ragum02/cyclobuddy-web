@@ -12,7 +12,7 @@ interface LinksProps {
 
 export default function Links({ links, className, itemClassName }: LinksProps) {
   const linkHover =
-    'hover:translate-y-[-2px] transform transition-all duration-300 hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)]';
+    'inline-block hover:translate-y-[-2px] transform transition-all duration-300 hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)]';
 
   return (
     <ul className={clsx('flex flex-col gap-2', className)} role="list">
