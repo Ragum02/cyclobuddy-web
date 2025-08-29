@@ -34,7 +34,7 @@ describe('Navbar structure', () => {
   it('renders the account actions', () => {
     const actions = screen.getByRole('group', { name: /account actions/i });
     expect(
-      within(actions).getByRole('link', { name: 'Login' }),
+      within(actions).getByRole('link', { name: 'Se connecter' }),
     ).toHaveAttribute('href', '/login');
     expect(
       within(actions).getByRole('link', { name: "S'inscrire" }),

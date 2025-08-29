@@ -1,3 +1,10 @@
 export default function Footer() {
-  return <h1>test</h1>;
+  return (
+    <footer>
+      <nav></nav>
+      <nav></nav>
+      <nav></nav>
+      <nav></nav>
+    </footer>
+  );
 }

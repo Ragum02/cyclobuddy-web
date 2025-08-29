@@ -1,54 +1,53 @@
 'use client';
 
-import Link from 'next/link';
 import clsx from 'clsx';
-import Button from '../ui/Button';
 import { useIsMobile } from '@/app/hooks/useIsMobile';
+import Button from '../ui/Button';
+import Links from '../ui/Links';
+import Link from 'next/link';
+import type { LinkItem } from '@/app/@types/linkItem';
 
 interface NavLinksProps {
   closeMenu?: () => void;
 }
 
-export default function NavLinks({ closeMenu }: NavLinksProps) {
+export default function NavigationsLinks({ closeMenu }: NavLinksProps) {
   const isMobile = useIsMobile();
 
   const handleClick = () => {
     if (closeMenu) closeMenu();
   };
 
-  const linkHover =
-    'hover:translate-y-[-2px] transform transition-all duration-300 hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)]';
+  const mainLinks: LinkItem[] = [
+    { name: 'Sorties', href: '/rides', onClick: handleClick },
+    { name: 'Groupes', href: '/groups', onClick: handleClick },
+    { name: 'Nouvelle sortie', href: '/create-ride', onClick: handleClick },
+  ];
 
   return (
     <>
-      <ul
-        className={clsx(
-          'flex',
+      <Links
+        links={mainLinks}
+        className={
           isMobile
             ? 'flex-col gap-10 items-center'
-            : 'flex-row gap-20 items-center',
-        )}
-        role="list"
-      >
-        <li onClick={handleClick} className={linkHover}>
-          <Link href="/rides">Sorties</Link>
-        </li>
-        <li onClick={handleClick} className={linkHover}>
-          <Link href="/groups">Groupes</Link>
-        </li>
-        <li onClick={handleClick} className={linkHover}>
-          <Link href="/create-ride">Nouvelle sortie</Link>
-        </li>
-      </ul>
+            : 'flex-row gap-20 items-center'
+        }
+      />
+
       <div
         role="group"
         aria-label="account actions"
         className={clsx(
           'flex items-center',
-          isMobile ? 'flex-col gap-10 items-center mt-10' : 'flex-row gap-20',
+          isMobile ? 'flex-col gap-10 items-center mt-10' : 'flex-row gap-10',
         )}
       >
-        <Link href="/login" onClick={handleClick} className={linkHover}>
+        <Link
+          href="/login"
+          onClick={handleClick}
+          className="hover:translate-y-[-2px] transform transition-all duration-300 hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)]"
+        >
           Se connecter
         </Link>
 
