@@ -11,13 +11,13 @@ export default function BurgerMenu() {
     burgerButton:
       'bg-white block h-0.5 w-5 rounded-sm transition-all duration-300',
     isOpenHeader: 'w-screen flex justify-between h-10 p-2 pr-10',
-    isClosedHeader: 'w-screen flex justify-between p-2 pr-10 h-10',
+    isClosedHeader: 'flex justify-between p-2 pr-10 h-10',
     contentTransition:
-      'bg-[var(--foreground)] py-5 h-full scale-100 duration-500 ease-in-out transition-all block flex flex-col items-center mt-5',
+      'from-[rgba(12,30,62,0.95)] to-[rgba(0,70,120,0.95)] backdrop-blur-md bg-gradient-to-b py-5 h-full scale-100 duration-500 ease-in-out transition-all block flex flex-col items-center mt-5',
   };
 
   return (
-    <div className="fixed top-5 right-0 z-20 w-full flex flex-col">
+    <div className="fixed top-5 right-0 z-10 flex flex-col">
       <header
         className={clsx('flex justify-between items-center', {
           [style.isOpenHeader]: isOpen,
