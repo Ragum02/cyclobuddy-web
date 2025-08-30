@@ -22,10 +22,9 @@ describe('Navbar structure', () => {
       'href',
       '/rides',
     );
-    expect(within(list).getByRole('link', { name: 'Groupes' })).toHaveAttribute(
-      'href',
-      '/groups',
-    );
+    expect(
+      within(list).getByRole('link', { name: 'Mes sorties' }),
+    ).toHaveAttribute('href', '/my-rides');
     expect(
       within(list).getByRole('link', { name: 'Nouvelle sortie' }),
     ).toHaveAttribute('href', '/create-ride');

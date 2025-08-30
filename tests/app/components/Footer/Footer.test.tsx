@@ -33,8 +33,8 @@ describe('Footer structure', () => {
       within(mainLinksNav).getByRole('link', { name: 'Sorties' }),
     ).toHaveAttribute('href', '/rides');
     expect(
-      within(mainLinksNav).getByRole('link', { name: 'Groupes' }),
-    ).toHaveAttribute('href', '/groups');
+      within(mainLinksNav).getByRole('link', { name: 'Mes sorties' }),
+    ).toHaveAttribute('href', '/my-rides');
     expect(
       within(mainLinksNav).getByRole('link', { name: 'Nouvelle sortie' }),
     ).toHaveAttribute('href', '/create-ride');

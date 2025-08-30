@@ -1,9 +1,9 @@
 import {
   InvalidEmailError,
   WeakPasswordError,
-} from '@/src/entities/errors/auth';
-import { User } from '@/src/entites/models/user';
-import { SignUpUseCase } from '@/src/application/use-cases/sign-up.use-cases';
+} from '../../../../src/entities/errors/auth';
+import { User } from '../../../../src/entities/models/user';
+import { SignUpUseCase } from '../../../../src/application/use-cases/sign-up.use-case';
 
 describe('Sign Up Use Case', () => {
   let mockUsersRepository: any;
@@ -36,16 +36,25 @@ describe('Sign Up Use Case', () => {
   it('should throw an error when the email is invalid', async () => {
     const signUpUseCase = new SignUpUseCase(mockUsersRepository);
 
-    await expect(
-      signUpUseCase.execute({ email: 'wrong!', password: 'password123' }),
-    ).rejects.toThrowError(InvalidEmailError);
+    try {
+      await signUpUseCase.execute({ email: 'wrong!', password: 'password123' });
+      fail('Expected InvalidEmailError to be thrown');
+    } catch (error) {
+      expect(error).toBeInstanceOf(InvalidEmailError);
+    }
   });
 
   it('throws an error when the password is too weak', async () => {
     const signUpUseCase = new SignUpUseCase(mockUsersRepository);
 
-    await expect(
-      signUpUseCase.execute({ email: 'test@example.com', password: 'bip' }),
-    ).rejects.toThrowError(WeakPasswordError);
+    try {
+      await signUpUseCase.execute({
+        email: 'test@example.com',
+        password: 'bip',
+      });
+      fail('Expected WeakPasswordError to be thrown');
+    } catch (error) {
+      expect(error).toBeInstanceOf(WeakPasswordError);
+    }
   });
 });
