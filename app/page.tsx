@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <HeroContainer />
-      <div className="flex flex-1 flex-col md:flex-row justify-evenly items-center gap-8 py-10 ">
+      <div className="flex flex-1 flex-col lg:flex-row justify-evenly items-center gap-8 py-10 ">
         <Card
           logo="/svg/homecard/add-ride.svg"
           title="Crée une sortie"
